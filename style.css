@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo da página */
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color:#7ED957;
+    color: #2F4F4F;
+}
+
+/* Estilos gerais */
+
+h1 {
+    font-weight: bold;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+p {
+    padding: 10px 0 10px 2em;
+}
+
+strong {
+    color: #846181;
+}
+
+.footer-strong {
+    color: #2F4F4F;
+}
+
+/* Estilos de imagem */
+
+.header-image {
+    width: 13%;
+    height: auto;
+}
+
+.main-image {
+    width: 25%;
+    height: auto;
+    padding: 5px 1em 0 1em;
+}
+
+/* Layout principal */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #cad9c2;
+    border: 15px double #f0ffff;
+    border-radius: 25px;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 15% 2% 15%;
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__titulo__destaque {
+    padding-left: 5em;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em 0.5em 3em;
+}
+
+.apresentacao__links__link {
+    background-color: #2F4F4F;
+    color:#f0ffff;
+    width: 220px;
+    padding: 21.5px 0;
+    border: 10px double;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    margin: 0 15% 0 15%;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
