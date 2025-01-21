@@ -41,10 +41,12 @@ strong {
 .header-image {
     width: 25%;
     height: auto;
+    min-width: 75px;
 }
 
 .apresentacao__imagem {
     width: 40%;
+    padding: 1rem;
 }
 
 /* Layout principal */
@@ -56,6 +58,11 @@ strong {
     padding: 0 0.15rem;
 }
 
+.cabecalho__logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 .cabecalho__menu {
     display: flex;
     gap: 2.5rem;
@@ -77,12 +84,12 @@ strong {
 
 .apresentacao {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     margin: 0 15% 2% 15%;
     background-color: var(--cor-primaria);
-    border: 15px double var(--cor-bordas);
-    border-radius: 25px;
+    border: 0.9375rem double var(--cor-bordas);
+    border-radius: 30px;
     width: 70%;
 }
 
@@ -92,8 +99,64 @@ strong {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2.5rem;
-    padding-left: 2em;
+    padding-left: 2rem;
 }
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    padding-top: 1rem;
+}
+
+.apresentacao__conteudo__titulo-destaque {
+    padding-left: 5rem;
+    padding-top: 0;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    padding: 1rem;
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.apresentacao__links__navegacao {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--cor-secundaria);
+    width: 60%;
+    padding: 1.3rem 0;
+    border: 0.625rem double;
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-terciaria);
+}
+
+/* Página do currículo */
 
 .curriculo__info {
     width: 90.1%;
@@ -103,29 +166,8 @@ strong {
     gap: 2.5rem;
 }
 
-.apresentacao__conteudo__titulo {
-    font-size: 2.25rem;
-    font-family: var(--fonte-primaria);
-    padding-top: 1rem;
-}
-
 .curriculo__info__titulo {
     padding: 0.5rem 0;
-}
-
-.apresentacao__conteudo__titulo__destaque {
-    padding-left: 5rem;
-    padding-top: 0;
-}
-
-.apresentacao__conteudo__texto {
-    font-size: 1.5rem;
-    font-family: var(--fonte-secundaria);
-    padding: 0.625rem 0 0.625rem 2rem;
-}
-
-section, div {
-    border: 1px solid black;
 }
 
 .curriculo__info__secoes {
@@ -156,52 +198,92 @@ section, div {
     font-family: var(--fonte-primaria);
 }
 
-.apresentacao__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding-bottom: 2rem;
+.curriculo__info__secoes-principal__secao__extras__tipo, .curriculo__info__secoes-mais__secao__extras__tipo {
+    padding: 1rem 0 0 1rem;
 }
 
-.apresentacao__links__subtitulo {
-    font-family: 'Krona One', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
+.curriculo__info__secoes-principal__secao__lista, .curriculo__info__secoes-mais__secao__lista {
+    padding-top: 1rem;
 }
 
-.apresentacao__links__navegacao {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    color: var(--cor-secundaria);
-    width: 60%;
-    padding: 21.5px 0;
-    border: 10px double;
-    border-radius: 8px;
-    text-align: center;
+.curriculo__info__secoes-principal__secao__extras__titulo .curriculo__info__secoes-mais__secao__extras__titulo {
+    padding-top: 1rem;
+}
+
+.sobremim__link {
+    color: var(--cor-destaque);
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.apresentacao__links__link:hover {
-    background-color: var(--cor-terciaria);
+.sobremim {
+    padding-bottom: 1.5rem;
+}
+
+.sobremim__texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.2rem;
+    padding: 0.5rem;
 }
 
 .rodape {
     padding: 1.9%;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 400;
     background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
 }
 
-.rodape__destaque {
+.rodape-destaque {
     color: var(--cor-secundaria);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 400;
 } 
+
+@media (max-width:1000px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0.5rem;
+        width: auto;
+        padding: 0 15%;
+    }
+
+    .cabecalho__logo {
+        justify-content: center;
+    }
+
+    .cabecalho__menu {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 2% 5% 2% 5%;
+        width: auto;
+    }
+    
+    .apresentacao__conteudo {
+        width: auto;
+        padding: 0 2%;
+    }
+
+    .apresentacao__conteudo__titulo, .apresentacao__conteudo__titulo-destaque, .apresentacao__conteudo__texto {
+        padding: 0;
+    }
+
+    .apresentacao__links__navegação, .curriculo__info, .curriculo__info__secoes-principal__secao, .curriculo__info__secoes-mais__secao {
+        width: auto;
+    }
+
+    .curriculo__info__secoes-principal__secao, .curriculo__info__secoes-mais__secao {
+        padding-left: 1rem;
+    }
+
+    .rodape {
+        width: auto;
+    }
+}
