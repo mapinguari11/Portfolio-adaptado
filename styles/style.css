@@ -38,7 +38,7 @@ strong {
 
 /* Estilos de imagem */
 
-.header-image {
+.cabecalho__logo__imagem {
     width: 25%;
     height: auto;
     min-width: 75px;
@@ -156,31 +156,24 @@ strong {
     background-color: var(--cor-terciaria);
 }
 
+.rodape {
+    padding: 1.9%;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+.rodape-destaque {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+} 
+
 /* Página do currículo */
 
-.curriculo__info {
-    width: 90.1%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-}
-
-.curriculo__info__titulo {
-    padding: 0.5rem 0;
-}
-
-.curriculo__info__secoes {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    font-family: var(--fonte-secundaria);
-    padding: 0.625rem 0 0.625rem 0.5em;
-}
-
-.curriculo__info__secoes-principal, .curriculo__info__secoes-mais {
+.curriculo-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -190,25 +183,27 @@ strong {
     font-family: var(--fonte-secundaria);
 }
 
-.curriculo__info__secoes-principal__secao, .curriculo__info__secoes-mais__secao {
+.curriculo-info__secao {
     width: 45%;
 }
 
-.curriculo__info__secoes-principal__secao__titulo, .curriculo__info__secoes-principal__secao__extras__tipo {
+.titulo-secao, .titulo-extras {
     font-family: var(--fonte-primaria);
 }
 
-.curriculo__info__secoes-principal__secao__extras__tipo, .curriculo__info__secoes-mais__secao__extras__tipo {
+extras__tipo {
     padding: 1rem 0 0 1rem;
 }
 
-.curriculo__info__secoes-principal__secao__lista, .curriculo__info__secoes-mais__secao__lista {
+.secao__lista {
     padding-top: 1rem;
 }
 
-.curriculo__info__secoes-principal__secao__extras__titulo .curriculo__info__secoes-mais__secao__extras__titulo {
+.titulo-extras {
     padding-top: 1rem;
 }
+
+/* Página Sobre Mim*/
 
 .sobremim__link {
     color: var(--cor-destaque);
@@ -224,21 +219,6 @@ strong {
     font-size: 1.2rem;
     padding: 0.5rem;
 }
-
-.rodape {
-    padding: 1.9%;
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-    background-color: var(--cor-terciaria);
-    color: var(--cor-primaria);
-}
-
-.rodape-destaque {
-    color: var(--cor-secundaria);
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-} 
 
 @media (max-width:1000px) {
     .cabecalho {
@@ -275,11 +255,11 @@ strong {
         padding: 0;
     }
 
-    .apresentacao__links__navegação, .curriculo__info, .curriculo__info__secoes-principal__secao, .curriculo__info__secoes-mais__secao {
+    .apresentacao__links__navegação, .curriculo__info, .curriculo-info__secao {
         width: auto;
     }
 
-    .curriculo__info__secoes-principal__secao, .curriculo__info__secoes-mais__secao {
+    .curriculo-info__secao {
         padding-left: 1rem;
     }
 
